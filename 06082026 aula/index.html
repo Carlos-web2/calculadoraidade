@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revisao javascript</title>
+    <script> 
+    
+    function cadastrarnome (){
+        let nome = document.getElementById('inputname').value //o let é o que se usa para definir uma variavel, porem o "var" tambem funciona//
+        let idade = document.getElementById("numberidade").value
+        let cidadenatal = document.getElementById('cidadenatal').value
+        let cpf = document.getElementById('cpf').value
+        let nomedamae = document.getElementById('nomedamae').value
+        document.getElementById("exibidortexto").innerHTML = "seu nome é: " + nome + " e sua idade é: " + idade + " anos" + ", voce nasceu em: " + cidadenatal + ", seu cpf é: " + cpf + " e sua mãe se chama: " + nomedamae  //esse é para colocar o texto no h2//
+        
+        if (idade <= 17){
+            alert('VOCE É MENOR DE IDADE SEU BOSTA')
+        }
+        else {
+            document.getElementById("apenasparamostraridade").innerHTML = "VOCE É MAIOR DE IDADE!"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!--essa é a revisao e os comandos abaixo fazem um campo de uma pagina de cadastro-->
+    <label for="inputname">NOME:</label><!---essa tag "label", dá um rotulo para uma tag como a "input"-->
+    <input type="text" name="inputname" id="inputname">
+    <label for="">IDADE: </label>
+    <input type="number" id="numberidade">
+   
+    <!--parte da atividade-->
+    <label for="cidadenatal">Cidade natal: </label>
+    <input type="text" name="cidadenatal" id="cidadenatal">
+    <label for="">CPF: </label>
+    <input type="number" id="cpf">
+    <label for="">Nome da sua mãe: </label>
+    <input type="text" name="nomedamae" id="nomedamae">
+    <input type="button" value="cadastrar" onclick="cadastrarnome()"> <!--o "onclick" faz com que se clicando o botao, ele vai fazer o que fala na funciont-->
+    <h2 id="exibidortexto"></h2>
+    <p id="apenasparamostraridade"></p>
+</body>
+</html>
